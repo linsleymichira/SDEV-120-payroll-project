@@ -1,0 +1,29 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Output files (generated during runtime)
+payroll_results.txt
+payroll_results_demo.txt
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Test coverage
+.coverage
+htmlcov/
