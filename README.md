@@ -34,7 +34,7 @@ The main.py module will be the entry point of the application, presenting all as
 In the design it is assumed that options will be chosen via a number. The number could represent the index of the option or in some cases the ID of the employee a user wishes to interact with. In all cases there should be a way to back out to the prior menu or exit the application completely if on the main menu. With this being the case, a set amount of validation options would be helpful taking in user input and returning a boolean indicating if the input was valid.
 
 1. Validate Number
-    1. Checks if value added was a number
+    1. Checks if the input value is a number
 2. Validate String
     1. Checks if input is a valid string
     2. Could set max char size to keep from invalid names being entered and save db resources
