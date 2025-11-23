@@ -82,7 +82,7 @@ Reads the database and returns the Id, first name, and last name of the employee
 
 Uses inputed employee to reveal all data for the employees record as well as their current gross and net pay. The user will have the option to return to the employee list.
 
-### Update Employee general info
+### Update Employee General Info
 
 This feature will iterate through each column of the employee's record offering users to update any part of it.
 
