@@ -86,7 +86,7 @@ Uses inputed employee to reveal all data for the employees record as well as the
 
 This feature will iterate through each column of the employee's record offering users to update any part of it.
 
-### Update Employee time
+### Update Employee Time
 
 This feature will prompt user to add a number for hours worked. It will take this number and add it to the current number of hours the employee has on their record.
 
