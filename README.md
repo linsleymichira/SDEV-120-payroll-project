@@ -6,7 +6,7 @@ SDEV 120 Payroll Project
 
 ### Preliminary
 
-This guide assumes the reader has a very basic understanding of how to fork a branch to begin working on your codechanges. If a refresher is needed, more information can be found at these links for using [GitHub tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo?tool=webui) or [VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview#_branches-and-tags).
+This guide assumes the reader has a very basic understanding of how to fork a branch to begin working on your code changes. If a refresher is needed, more information can be found at these links for using [GitHub tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo?tool=webui) or [VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview#_branches-and-tags).
 
 ### Pull Requests
 
