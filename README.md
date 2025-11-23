@@ -37,7 +37,7 @@ In the design it is assumed that options will be chosen via a number. The number
     1. Checks if the input value is a number
 2. Validate String
     1. Checks if input is a valid string
-    2. Could set max char size to keep from invalid names being entered and save db resources
+    2. Could set a maximum character size to prevent invalid names from being entered and to save database resources.
 
 
 ### Module Connections
