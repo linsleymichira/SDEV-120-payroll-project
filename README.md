@@ -72,7 +72,7 @@ graph LR
     Menu --> Exit([Exit])
 ```
 
-## Feature Explaination
+## Feature Explanation
 
 ### Get Employees
 
