@@ -31,7 +31,7 @@ This is **not** designed as a hard plan that must be followed. This is a concept
 
 The main.py module will be the entry point of the application, presenting all aspects of the UI and prompting users for input. The validations.py module takes the input from main.py and verifies the validity of the data, returning a boolean to the main.py if the data is valid. The database.py module will be responsible for reading and writing to the database.csv file, as well as handling the calculations for the application.
 
-In the design it is assumed that options will be chosen via a number. The number could represent the index of the option or in some cases the ID of the employee a user wishes to interact with. In all cases there should be a way to back out to the prior menu or exit the application completely if on the main menu. With this being the case, a set amount of validation options would be helpful taking in user input and returning a bool determining if the input was valid or not
+In the design it is assumed that options will be chosen via a number. The number could represent the index of the option or in some cases the ID of the employee a user wishes to interact with. In all cases there should be a way to back out to the prior menu or exit the application completely if on the main menu. With this being the case, a set amount of validation options would be helpful taking in user input and returning a boolean indicating if the input was valid.
 
 1. Validate Number
     1. Checks if value added was a number
