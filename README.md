@@ -53,7 +53,7 @@ graph LR
     C <--> D[database.csv]
 ```
 
-### Heirarchy
+### Hierarchy
 
 ``` mermaid
 ---
