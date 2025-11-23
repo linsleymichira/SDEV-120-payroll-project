@@ -92,7 +92,7 @@ This feature will prompt user to add a number for hours worked. It will take thi
 
 ### Delete Employee
 
-This feature will remove the record with the corresponding employee ID provided. This feature could have a warning to let the user know this will delete the whole record of the employee and ask if they are sure.
+This feature will remove the record with the coresponding employee Id provided. This feature could have a warning to let the user know this will delete the whole record of the employee and ask if they are sure.
 
 ### Add Employee
 
