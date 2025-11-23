@@ -17,7 +17,7 @@ Pull requests allow developers to request to merge their branch into another one
 1. Navigate to the project's [main page](https://github.com/linsleymichira/SDEV-120-payroll-project) on GitHub.
 2. Select the ["Pull requests"](https://github.com/linsleymichira/SDEV-120-payroll-project/pulls) tab of the navigation bar at the top left side of the project's main page.
 3. Select the green ["New pull request"](https://github.com/linsleymichira/SDEV-120-payroll-project/compare) on the pull requests page.
-4. Select the base branch (the branch you want to merge in to) and select your branch as the compare branch and press "Create pull request".
+4. Select the base branch (the branch you want to merge into) and select your branch as the compare branch and press "Create pull request".
 5. From there fill out the form with a title and description for the pull request and press "Create pull request".
 6. Once a reviewer has approved the pull request, click the "Merge pull request" button.
 
