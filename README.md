@@ -98,6 +98,6 @@ This feature will remove the record with the coresponding employee Id provided. 
 
 This feature will add an employee record to the csv on a new line. The logic should ensure that the Id will be unique by checking the max Id already in the table and incrementing by one.
 
-### Reset Week **Optional**
+### Reset Week (Optional)
 
 This feature will iterate through every employee record and reset their hours back to 0. This feature could have a warning to let the user know this will reset all hours and ask if they are sure.
