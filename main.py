@@ -2,16 +2,7 @@
 Main Payroll System Program
 The Pythonex - SDEV 120 Group Project
 
-Team Members:
-- Linsley Michira (Team Leader)
-- Jacob Solomon (Assistant)
-- Thaija Wilson (Stenographer)
-- Bran Mai Nhkum
-- Elijah Penman
-- Ronald Rudolph
-
-Instructor: Professor Carla Uycoque
-Ivy Tech Community College - SDEV120
+Handles overall program flow and integrates modules.
 """
 
 import database_module
@@ -224,15 +215,6 @@ def main():
     print("PAYROLL SYSTEM")
     print("The Pythonex - SDEV 120 Group Project")
     print("="*70)
-    print("\nTeam Members:")
-    print("- Linsley Michira (Team Leader)")
-    print("- Jacob Solomon (Assistant)")
-    print("- Thaija Wilson (Stenographer)")
-    print("- Bran Mai Nhkum")
-    print("- Elijah Penman")
-    print("- Ronald Rudolph")
-    print("\nInstructor: Professor Carla Uycoque")
-    print("Ivy Tech Community College")
     print("="*70)
     
     # Ask if user wants to load test data
