@@ -78,7 +78,7 @@ def save_results_to_file(payroll_results, filename="payroll_results.txt"):
         
         print(f"\nResults saved to {filename}")
         return True
-    except Exception as e:
+    except (IOError, OSError) as e:
         print(f"Error saving results to file: {e}")
         return False
 
