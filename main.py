@@ -215,7 +215,6 @@ def main():
     print("PAYROLL SYSTEM")
     print("The Pythonex - SDEV 120 Group Project")
     print("="*70)
-    print("="*70)
     
     # Ask if user wants to load test data
     print("\nWould you like to load the 10 test employees?")
