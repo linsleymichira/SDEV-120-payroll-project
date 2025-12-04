@@ -42,8 +42,8 @@ def validate_employee_id(employee_id):
         return False, "Employee ID cannot be empty"
     
     # Check if ID follows format (e.g., E001)
-    if len(employee_id) < 2:
-        return False, "Employee ID must be at least 2 characters"
+    if not (employee_id.startswith('E') and len(employee_id) == 4 and employee_id[1:].isdigit()):
+        return False, "Employee ID must follow the format 'E' followed by 3 digits (e.g., E001)."
     
     return True, ""
 
