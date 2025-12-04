@@ -10,7 +10,7 @@ import calculations_module
 
 def validate_name(name):
     """
-    Validate that name is not empty and contains only letters and spaces
+    Validate that name is not empty and contains only letters, spaces, hyphens, and apostrophes
     
     Parameters:
         name (str): Name to validate
