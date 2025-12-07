@@ -1,6 +1,5 @@
 """
 Calculations Module for Payroll System
-The Pythonex - SDEV 120 Group Project
 Handles all payroll calculations including gross pay, taxes, and net pay
 """
 

@@ -213,7 +213,6 @@ def main():
     """
     print("="*70)
     print("PAYROLL SYSTEM")
-    print("The Pythonex - SDEV 120 Group Project")
     print("="*70)
     
     # Ask if user wants to load test data
