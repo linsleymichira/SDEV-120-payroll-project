@@ -3,6 +3,8 @@ import constants
 import validation
 import os
 
+# Written by: Jacob Solomon
+
 DATAFILE = 'test_data.csv'
 UPDATEREQUEST = "Please enter new value for"
 HOURREQUEST = "Please enter hours worked: "

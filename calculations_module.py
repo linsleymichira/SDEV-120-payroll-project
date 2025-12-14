@@ -3,6 +3,8 @@ Calculations Module for Payroll System
 Handles all payroll calculations including gross pay, taxes, and net pay
 """
 
+# Written By: Matthew 
+
 # Tax rates
 STATE_TAX_RATE = 0.056  # 5.6%
 FEDERAL_TAX_RATE = 0.079  # 7.9%

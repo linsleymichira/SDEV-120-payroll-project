@@ -94,45 +94,52 @@ def calculate_payroll(hours_worked, pay_rate):
         'net_pay': net_pay
     }
 
-# MODULE 3: Output & Data Management
-def display_employee_payroll(employee_data, payroll_data):
-    """Displays payroll summary to the user"""
-    print("\n" + "=" * 50)
-    print("PAYROLL SUMMARY")
-    print("=" * 50)
-    print(f"Employee: {employee_data['first_name']} {employee_data['last_name']}")
-    print(f"ID: {employee_data['employee_id']}")
-    print(f"Dependents: {employee_data['dependents']}")
-    print(f"Hours Worked: {employee_data['hours_worked']}")
-    print(f"Regular Hours: {payroll_data['regular_hours']}")
-    print(f"Overtime Hours: {payroll_data['overtime_hours']}")
-    print("-" * 50)
-    print(f"Regular Pay: ${payroll_data['regular_pay']:.2f}")
-    print(f"Overtime Pay: ${payroll_data['overtime_pay']:.2f}")
-    print(f"Gross Pay: ${payroll_data['gross_pay']:.2f}")
-    print(f"State Tax (5.6%): ${payroll_data['state_tax']:.2f}")
-    print(f"Federal Tax (7.9%): ${payroll_data['federal_tax']:.2f}")
-    print("-" * 50)
-    print(f"NET PAY: ${payroll_data['net_pay']:.2f}")
-    print("=" * 50)
 
-def save_to_file(employee_record):
-    """Saves employee payroll record to a file"""
-    try:
-        with open("payroll_results.txt", "a") as file:
-            file.write("Employee Record\n")
-            file.write("-" * 30 + "\n")
-            file.write(f"Name: {employee_record['first_name']} {employee_record['last_name']}\n")
-            file.write(f"ID: {employee_record['employee_id']}\n")
-            file.write(f"Hours: {employee_record['hours_worked']}\n")
-            file.write(f"Rate: ${employee_record['pay_rate']:.2f}\n")
-            file.write(f"Gross Pay: ${employee_record['gross_pay']:.2f}\n")
-            file.write(f"Net Pay: ${employee_record['net_pay']:.2f}\n")
-            file.write("-" * 30 + "\n\n")
-        return True
-    except Exception as e:
-        print(f"Error saving to file: {e}")
-        return False
+# We'll use Linsley's or Jacob's main program logic here.
+
+# # MODULE 3: Output & Data Management
+# def display_employee_payroll(employee_data, payroll_data):
+#     """Displays payroll summary to the user"""
+#     print("\n" + "=" * 50)
+#     print("PAYROLL SUMMARY")
+#     print("=" * 50)
+#     print(f"Employee: {employee_data['first_name']} {employee_data['last_name']}")
+#     print(f"ID: {employee_data['employee_id']}")
+#     print(f"Dependents: {employee_data['dependents']}")
+#     print(f"Hours Worked: {employee_data['hours_worked']}")
+#     print(f"Regular Hours: {payroll_data['regular_hours']}")
+#     print(f"Overtime Hours: {payroll_data['overtime_hours']}")
+#     print("-" * 50)
+#     print(f"Regular Pay: ${payroll_data['regular_pay']:.2f}")
+#     print(f"Overtime Pay: ${payroll_data['overtime_pay']:.2f}")
+#     print(f"Gross Pay: ${payroll_data['gross_pay']:.2f}")
+#     print(f"State Tax (5.6%): ${payroll_data['state_tax']:.2f}")
+#     print(f"Federal Tax (7.9%): ${payroll_data['federal_tax']:.2f}")
+#     print("-" * 50)
+#     print(f"NET PAY: ${payroll_data['net_pay']:.2f}")
+#     print("=" * 50)
+
+
+
+# We'll use Linsley's or Jacob's main program logic here.
+
+# def save_to_file(employee_record):
+#     """Saves employee payroll record to a file"""
+#     try:
+#         with open("payroll_results.txt", "a") as file:
+#             file.write("Employee Record\n")
+#             file.write("-" * 30 + "\n")
+#             file.write(f"Name: {employee_record['first_name']} {employee_record['last_name']}\n")
+#             file.write(f"ID: {employee_record['employee_id']}\n")
+#             file.write(f"Hours: {employee_record['hours_worked']}\n")
+#             file.write(f"Rate: ${employee_record['pay_rate']:.2f}\n")
+#             file.write(f"Gross Pay: ${employee_record['gross_pay']:.2f}\n")
+#             file.write(f"Net Pay: ${employee_record['net_pay']:.2f}\n")
+#             file.write("-" * 30 + "\n\n")
+#         return True
+#     except Exception as e:
+#         print(f"Error saving to file: {e}")
+#         return False
 
 
 # Not a calculation so, we'll use Linsley's or Jacob's main program logic here.

@@ -10,6 +10,7 @@ import calculations_module
 import ui_module
 import test_data
 from datetime import datetime
+import pandas as pd
 
 
 def save_results_to_file(payroll_results, filename="payroll_results.txt"):
