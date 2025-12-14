@@ -1,8 +1,18 @@
+import pandas as pd
+import constants
+import validation 
+import os
+
+
+
 # Payroll Precision Pro - Payroll Processing System
 # Developed by: [The Pythonex]
 
+# Written By: Matthew
+
 # MODULE 1: Data Input & Validation
-def get_employee_data():
+
+def create_employee_record():
     """Gets and validates employee data from user input"""
     print("\n=== Employee Data Entry ===")
     
@@ -10,6 +20,8 @@ def get_employee_data():
     first_name = input("Enter employee first name: ").strip()
     last_name = input("Enter employee last name: ").strip()
     employee_id = input("Enter employee ID: ").strip()
+    dependents = input("Enter number of dependents: ").strip()
+
     
     # Security: Input validation for hours worked
     max_hours = 80
@@ -122,43 +134,46 @@ def save_to_file(employee_record):
         print(f"Error saving to file: {e}")
         return False
 
-# MAIN PROGRAM LOGIC
-def main():
-    """Main program function"""
-    print("Welcome to Payroll Precision Pro!")
-    print("=================================")
-    
-    # Initialize employee list
-    employee_payroll_list = []
-    
-    # Main program loop
-    while True:
-        # Get employee data
-        emp_data = get_employee_data()
-        
-        # Calculate payroll
-        pay_data = calculate_payroll(emp_data['hours_worked'], emp_data['pay_rate'])
-        
-        # Combine all data into a single record
-        employee_record = {**emp_data, **pay_data}
-        employee_payroll_list.append(employee_record)
-        
-        # Display results
-        display_employee_payroll(emp_data, pay_data)
-        
-        # Save to file
-        if save_to_file(employee_record):
-            print("Payroll record saved to 'payroll_results.txt'")
-        
-        # Ask if user wants to process another employee
-        another = input("\nProcess another employee? (y/n): ").lower().strip()
-        if another != 'y':
-            break
-    
-    # Display summary
-    print(f"\nProcessing complete. Total employees processed: {len(employee_payroll_list)}")
-    print("Thank you for using Payroll Precision Pro!")
 
-# Run the program
-if __name__ == "__main__":
-    main()
+# Not a calculation so, we'll use Linsley's or Jacob's main program logic here.
+
+# # MAIN PROGRAM LOGIC
+# def main():
+#     """Main program function"""
+#     print("Welcome to Payroll Precision Pro!")
+#     print("=================================")
+    
+#     # Initialize employee list
+#     employee_payroll_list = []
+    
+#     # Main program loop
+#     while True:
+#         # Get employee data
+#         emp_data = get_employee_data()
+        
+#         # Calculate payroll
+#         pay_data = calculate_payroll(emp_data['hours_worked'], emp_data['pay_rate'])
+        
+#         # Combine all data into a single record
+#         employee_record = {**emp_data, **pay_data}
+#         employee_payroll_list.append(employee_record)
+        
+#         # Display results
+#         display_employee_payroll(emp_data, pay_data)
+        
+#         # Save to file
+#         if save_to_file(employee_record):
+#             print("Payroll record saved to 'payroll_results.txt'")
+        
+#         # Ask if user wants to process another employee
+#         another = input("\nProcess another employee? (y/n): ").lower().strip()
+#         if another != 'y':
+#             break
+    
+#     # Display summary
+#     print(f"\nProcessing complete. Total employees processed: {len(employee_payroll_list)}")
+#     print("Thank you for using Payroll Precision Pro!")
+
+# # Run the program
+# if __name__ == "__main__":
+#     main()
