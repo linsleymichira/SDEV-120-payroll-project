@@ -2,7 +2,7 @@
 Test Data for Payroll System
 The Pythonex - SDEV 120 Group Project
 Contains 10 test cases with fake employee data
-Created by: Thaija Wilson (Stenographer)
+Created by: Thaija Wilson
 """
 
 # Test case data for 10 employees

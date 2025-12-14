@@ -1,6 +1,6 @@
-import pandas as pd
-import constants
-import validation
+# import pandas as pd
+# import constants
+import validation_module
 import os
 
 # Written by: Jacob Solomon
@@ -24,9 +24,9 @@ def UpdateEmployeeDetails(index):
     for col in employees.columns:
         request = f"{UPDATEREQUEST} {col} "
         if col in constants.INTOPTIONS:
-            values.append(validation.GetInt(request))
+            values.append(validation_module.GetInt(request))
         elif col in constants.FLOATOPTIONS:
-            values.append(validation.GetFloat(request))
+            values.append(validation_module.GetFloat(request))
         elif col in constants.STRINGOPTIONS:
             values.append(input(request))
     values.append(values[len(values) - 1] * values[len(values) - 2])
@@ -34,7 +34,7 @@ def UpdateEmployeeDetails(index):
     UpdateEmployees(employees)
 
 def UpdateEmployeeHours(index):
-    hours = validation.GetFloat(HOURREQUEST)
+    hours = validation_module.GetFloat(HOURREQUEST)
     employees = GetAllEmployees()
     employees.at[index, constants.HOURSWORKED] = hours
     UpdateEmployees(employees)
@@ -62,9 +62,9 @@ def CreateEmployee():
     for col in employees.columns:
         request = f"{UPDATEREQUEST} {col} "
         if col in constants.INTOPTIONS:
-            values[col] = [validation.GetInt(request)]
+            values[col] = [validation_module.GetInt(request)]
         elif col in constants.FLOATOPTIONS:
-            values[col] = [validation.GetFloat(request)]
+            values[col] = [validation_module.GetFloat(request)]
         elif col in constants.STRINGOPTIONS:
             values[col] = [input(request)]
     values[constants.PAY] = [values[constants.RATE][0] * values[constants.HOURSWORKED][0]]
