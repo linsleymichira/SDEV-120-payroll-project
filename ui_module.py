@@ -6,6 +6,7 @@ Handles user interface and data entry with validation
 
 import database_module
 import calculations_module
+import validation_module
 
 
 def validate_hours(hours):
@@ -45,7 +46,7 @@ def get_employee_input():
         if employee_id.lower() == 'quit':
             return None
         
-        is_valid, error_msg = validate_employee_id(employee_id)
+        is_valid, error_msg = validation_module.validate_employee_id(employee_id)
         if is_valid:
             break
         print(f"Error: {error_msg}")
