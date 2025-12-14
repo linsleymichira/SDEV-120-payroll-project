@@ -8,27 +8,6 @@ import database_module
 import calculations_module
 import validation_module
 
-
-def validate_hours(hours):
-    """
-    Validate hours worked
-    
-    Parameters:
-        hours: Hours worked (can be string or float)
-    
-    Returns:
-        tuple: (bool, float, str) - (is_valid, hours_value, error_message)
-    """
-    try:
-        hrs = float(hours)
-        is_valid, error_msg = calculations_module.validate_hours(hrs)
-        if not is_valid:
-            return False, 0.0, error_msg
-        return True, hrs, ""
-    except ValueError:
-        return False, 0.0, "Hours worked must be a valid number"
-
-
 def get_employee_input():
     """
     Get employee information from user input with validation
@@ -54,7 +33,7 @@ def get_employee_input():
     # Get and validate First Name
     while True:
         first_name = input("Enter First Name: ").strip()
-        is_valid, error_msg = validate_name(first_name)
+        is_valid, error_msg = validation_module.validate_name(first_name)
         if is_valid:
             break
         print(f"Error: {error_msg}")
@@ -62,7 +41,7 @@ def get_employee_input():
     # Get and validate Last Name
     while True:
         last_name = input("Enter Last Name: ").strip()
-        is_valid, error_msg = validate_name(last_name)
+        is_valid, error_msg = validation_module.validate_name(last_name)
         if is_valid:
             break
         print(f"Error: {error_msg}")
@@ -70,7 +49,7 @@ def get_employee_input():
     # Get and validate Number of Dependents
     while True:
         dependents_input = input("Enter Number of Dependents: ").strip()
-        is_valid, dependents, error_msg = validate_dependents(dependents_input)
+        is_valid, dependents, error_msg = validation_module.validate_dependents(dependents_input)
         if is_valid:
             break
         print(f"Error: {error_msg}")
@@ -78,7 +57,7 @@ def get_employee_input():
     # Get and validate Hours Worked
     while True:
         hours_input = input("Enter Hours Worked: ").strip()
-        is_valid, hours_worked, error_msg = validate_hours(hours_input)
+        is_valid, hours_worked, error_msg = validation_module.validate_hours(hours_input)
         if is_valid:
             break
         print(f"Error: {error_msg}")

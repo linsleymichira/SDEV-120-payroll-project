@@ -115,3 +115,21 @@ def validate_dependents(dependents):
     except ValueError:
         return False, 0, "Number of dependents must be a valid number"
 
+def validate_hours(hours):
+    """
+    Validate hours worked
+    
+    Parameters:
+        hours: Hours worked (can be string or float)
+    
+    Returns:
+        tuple: (bool, float, str) - (is_valid, hours_value, error_message)
+    """
+    try:
+        hrs = float(hours)
+        is_valid, error_msg = calculations_module.validate_hours(hrs)
+        if not is_valid:
+            return False, 0.0, error_msg
+        return True, hrs, ""
+    except ValueError:
+        return False, 0.0, "Hours worked must be a valid number"
