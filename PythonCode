@@ -1,0 +1,120 @@
+# Payroll Program - The Pythonex
+
+MAX_HOURS = 60
+
+# -----------------------------
+# Module 1: Employee Data Input
+# -----------------------------
+def get_employee_data():
+    first = input("Enter employee first name: ").strip()
+    last = input("Enter employee last name: ").strip()
+    emp_id = input("Enter employee ID: ").strip()
+
+    if not first or not last:
+        print("Error: Name fields cannot be empty.")
+        return None
+
+    if not emp_id.isalnum():
+        print("Error: Employee ID must be alphanumeric.")
+        return None
+
+    try:
+        dependents = int(input("Enter number of dependents: "))
+        if dependents < 0:
+            print("Error: Dependents cannot be negative.")
+            return None
+    except:
+        print("Error: Dependents must be a whole number.")
+        return None
+
+    try:
+        hours = float(input("Enter hours worked: "))
+        if hours < 0 or hours > MAX_HOURS:
+            print(f"Error: Hours must be between 0 and {MAX_HOURS}.")
+            return None
+    except:
+        print("Error: Hours must be numeric.")
+        return None
+
+    try:
+        rate = float(input("Enter hourly rate: "))
+        if rate <= 0:
+            print("Error: Hourly rate must be positive.")
+            return None
+    except:
+        print("Error: Hourly rate must be numeric.")
+        return None
+
+    return first, last, emp_id, dependents, hours, rate
+
+
+# -----------------------------
+# Module 2: Payroll Calculations
+# -----------------------------
+def calculate_pay(hours, rate):
+    if hours <= 40:
+        gross = hours * rate
+    else:
+        overtime_hours = hours - 40
+        gross = (40 * rate) + (overtime_hours * rate * 1.5)
+
+    state_tax = gross * 0.056
+    federal_tax = gross * 0.079
+    net_pay = gross - (state_tax + federal_tax)
+
+    return gross, state_tax, federal_tax, net_pay
+
+
+# -----------------------------
+# Module 3: Output & File Storage
+# -----------------------------
+def save_to_file(record):
+    with open("payroll_results.txt", "a") as file:
+        file.write(record + "\n")
+
+
+def display_results(first, last, emp_id, gross, state_tax, federal_tax, net_pay):
+    print("\n--- Payroll Summary ---")
+    print(f"Employee: {first} {last}")
+    print(f"ID: {emp_id}")
+    print(f"Gross Pay: ${gross:.2f}")
+    print(f"State Tax: ${state_tax:.2f}")
+    print(f"Federal Tax: ${federal_tax:.2f}")
+    print(f"Net Pay: ${net_pay:.2f}")
+
+    record = (
+        f"{first} {last}, ID: {emp_id}, "
+        f"Gross: ${gross:.2f}, State Tax: ${state_tax:.2f}, "
+        f"Federal Tax: ${federal_tax:.2f}, Net Pay: ${net_pay:.2f}"
+    )
+    save_to_file(record)
+
+
+# -----------------------------
+# Main Program Loop
+# -----------------------------
+def main():
+    payroll_list = []
+
+    while True:
+        data = get_employee_data()
+        if data is None:
+            continue
+
+        first, last, emp_id, dependents, hours, rate = data
+        gross, state_tax, federal_tax, net_pay = calculate_pay(hours, rate)
+
+        payroll_list.append(
+            (first, last, emp_id, gross, state_tax, federal_tax, net_pay)
+        )
+
+        display_results(first, last, emp_id, gross, state_tax, federal_tax, net_pay)
+
+        again = input("\nProcess another employee? (y/n): ").lower()
+        if again != "y":
+            break
+
+    print("\nAll payroll data saved to payroll_results.txt")
+
+
+main()
